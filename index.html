@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <title>Ro‘yxatdan o‘tish</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Ro‘yxatdan o‘tish</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="form-container">
-        <h2>Ro‘yxatdan o‘tish</h2>
-        <form action="submit.php" method="post">
-            <label for="fullname">F.I.Sh:</label>
-            <input type="text" id="fullname" name="fullname" required>
+  <div class="container">
+    <h2>Ro‘yxatdan o‘tish formasi</h2>
 
-            <label for="email">Email manzilingiz:</label>
-            <input type="email" id="email" name="email" required>
+    <form id="registerForm">
+      <input type="text" id="nameInput" placeholder="Ismingizni kiriting" required>
+      <input type="text" id="phoneInput" placeholder="Telefon raqamingizni kiriting" required>
+      <button type="submit">Yuborish</button>
+    </form>
 
-            <label for="password">Parol:</label>
-            <input type="password" id="password" name="password" required>
+    <p id="message"></p>
 
-            <label for="confirm">Parolni tasdiqlang:</label>
-            <input type="password" id="confirm" name="confirm" required>
+    <h3>Ro‘yxatdan o‘tganlar (JSON):</h3>
+    <pre id="output"></pre>
 
-            <button type="submit">Yuborish</button>
-        </form>
-    </div>
+    <button onclick="downloadTxt()">Ro‘yxatni .txt yuklab olish</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
